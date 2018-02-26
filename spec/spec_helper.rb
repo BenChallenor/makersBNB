@@ -5,6 +5,9 @@ require File.join(File.dirname(__FILE__), '..', 'app.rb')
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
+require 'rake'
+
+Rake.application.load_rakefile
 
 Capybara.app = MakersBNB
 
@@ -36,6 +39,10 @@ RSpec.configure do |config|
     # ...rather than:
     #     # => "be bigger than 2"
     expectations.include_chain_clauses_in_custom_matcher_descriptions = true
+  end
+
+  config.before(:each) do
+    Rake::Task['test_database_setup'].execute
   end
 
   # rspec-mocks config goes here. You can use an alternate test double
