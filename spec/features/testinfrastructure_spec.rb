@@ -1,8 +1,3 @@
-require 'capybara/rspec'
-require_relative '../../app'
-
-Capybara.app = MakersBNB
-
 feature 'File structure working' do
   scenario 'should have home page' do
     visit '/'
