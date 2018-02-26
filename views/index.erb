@@ -1,5 +1,16 @@
 Hello from MakersBNB
 
-<form>
+<form action='/' method='post'>
+  <input type='text' name='Name' placeholder='Enter your name'> <br>
+  <input type='text' name='Phone' placeholder='Enter your phone number'> <br>
+  <input type='text' name='City' placeholder='Enter city'> <br>
+  <input type='text' name='Price_per_night' placeholder='Enter price per night'> <br>
+  <input type='text' name='Description' placeholder='Enter description of property'> <br>
   <input type='submit' value='Add Property!'>
 </form>
+
+  <%= session[:name] %> <br>
+  <%= session[:phone] %> <br>
+  <%= session[:city] %> <br>
+  <%= session[:price_per_night] %> <br>
+  <%= session[:description] %>
