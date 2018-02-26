@@ -4,19 +4,20 @@
     "password": null,
     "database": "makers_bnb",
     "host": "127.0.0.1",
+    "port": 5432,
     "dialect": "postgres"
   },
   "test": {
     "username": "marcusgardiner",
     "password": null,
-    "database": "makers_bnb_test",
+    "database": "makers_bnb",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
     "username": "marcusgardiner",
     "password": null,
-    "database": "database_production",
+    "database": "makers_bnb",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }
