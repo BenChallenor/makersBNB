@@ -1,12 +1,9 @@
-const Todo = require('server/models').Listings;
+require('server/models')
 
-module.exports = {
-  create(req, res) {
-    return Listings
-      .create({
-        title: req.body.title,
-      })
-      // .then(todo => res.status(201).send(todo))
-      // .catch(error => res.status(400).send(error));
-  },
-};
+db.listings.create( {
+  title: 'Marcus and Ben'
+})
+
+User.findAll().then(users => {
+  console.log(users)
+})
