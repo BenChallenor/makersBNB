@@ -3,6 +3,7 @@ const Listing = require('./models/listing.js');
 const listingsController = require('./controllers');
 const app = express();
 var bodyParser = require('body-parser');
+app.set('view engine', 'ejs');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
