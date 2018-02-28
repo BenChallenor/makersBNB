@@ -1,0 +1,1 @@
+const listings = require('./listings');
