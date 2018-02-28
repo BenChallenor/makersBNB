@@ -17,4 +17,6 @@ module.exports = {
       .all()
     .then(listings => res.status(200).send(listings));
   },
+
 };
+
