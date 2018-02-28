@@ -1,1 +1,1 @@
-const listings = require('/listings');
+const listings = require('./listings');

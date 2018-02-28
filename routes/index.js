@@ -1,10 +1,10 @@
-const listingsController = require('../contollers').listings;
+const listingsController = require('../controllers').listings;
 var path = require('path');
 
-model.exports = (app) => {
+module.exports = (app) => {
 
   app.get('/');
 
   app.post('/');
-  
-}
+
+};
