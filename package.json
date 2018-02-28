@@ -4,7 +4,7 @@
   "description": "High-level Specification --------",
   "main": "index.js",
   "dependencies": {
-    "pg": "^7.4.1",
+    "pg": "^6.4.0",
     "pg-hstore": "^2.3.2",
     "sequelizer": "^1.1.3"
   },
