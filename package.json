@@ -1,0 +1,28 @@
+{
+  "name": "makersBNB",
+  "version": "1.0.0",
+  "description": "High-level Specification --------",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "pg": "^7.4.1",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.35.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tamasmagyarhunor88/makersBNB.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tamasmagyarhunor88/makersBNB/issues"
+  },
+  "homepage": "https://github.com/tamasmagyarhunor88/makersBNB#readme"
+}
