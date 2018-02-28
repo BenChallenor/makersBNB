@@ -7,6 +7,6 @@ module.exports = (app) => {
     res.sendFile(path.join(__dirname + '/../views/index.html'));
   });
 
-  app.post('/');
+  app.post('/', listingsController.create);
 
 };
