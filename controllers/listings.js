@@ -14,6 +14,5 @@ module.exports = {
   list(req, res) {
     return Listing
       .all()
-    .then(listings => res.status(200).send(listings));
   },
 };

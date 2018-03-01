@@ -1,12 +1,17 @@
+debugger;
+
 const listingsController = require('../controllers').listings;
 var path = require('path');
 
-module.exports = (app) => {
+module.exports = function(app) {
 
   app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname + '/../views/index.html'));
-  });
-  
+     listingsController.list(req, res)
+      .then(function(listings){
+         res.render('index', { x: listings })
+       });
+   });
+
   app.post('/', listingsController.create);
 
-};
+}
