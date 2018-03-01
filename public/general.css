@@ -7,6 +7,10 @@
   padding-left: 1em;
 }
 
+.invisible_form {
+  visibility: hidden;
+}
+
 .single_form_window {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
@@ -25,6 +29,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-column-gap: 1em;
+  grid-row-gap: 1em;
 }
 
 .single_listing {
