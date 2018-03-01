@@ -5,6 +5,10 @@ const app = express();
 var bodyParser = require('body-parser');
 app.set('view engine', 'ejs');
 
+app.use(express.static(__dirname + "/public"));
+// app.use("/public",express.static(__dirname + "/public")); [other way to load css]
+
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
