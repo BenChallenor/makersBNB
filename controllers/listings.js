@@ -13,8 +13,6 @@ module.exports = {
   list(req, res) {
     return Listing
       .all()
-    // promise.then(listings => res.status(200).send(listings))
   },
-
 
 }
