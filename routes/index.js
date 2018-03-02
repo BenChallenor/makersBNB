@@ -1,6 +1,7 @@
 debugger;
 
 const listingsController = require('../controllers').listings;
+const usersController = require('../controllers').users;
 var path = require('path');
 
 function renderResponse(req, res, message) {
@@ -16,7 +17,7 @@ module.exports = function(app) {
      renderResponse(req, res, "");
    });
 
-   app.post('/', function(req, res) {
+   app.post('/create_listing', function(req, res) {
       if (isNaN(parseInt(req.body['listingprice']))) {
         renderResponse(req, res, "put a number in the price plz.");
         return;
@@ -28,6 +29,19 @@ module.exports = function(app) {
           renderResponse(req, res, "Error!");
         });
     });
+
+    app.post('/create_user', function(req, res) {
+       // if (isNaN(parseInt(req.body['listingprice']))) {
+       //   renderResponse(req, res, "put a number in the price plz.");
+       //   return;
+       // }
+       usersController.create(req, res)
+        .then(function(user){ // redirect when success, flash needed.
+           res.redirect(302, '/');
+         }, function(error) { // render with error on failure
+           renderResponse(req, res, "Error!");
+         });
+     });
 
   // app.post('/', listingsController.create);
 
