@@ -12,4 +12,18 @@ describe('Homepage', function() {
     });
   });
 
+  it( "should show the listings when you fill in the form", function(next) {
+    browser.visit('/', function() {
+      browser.pressButton('#add_place_button')
+      browser.fill('listingname', 'TESTNAME')
+      browser.fill('listinglocation', 'TESTLOCATION')
+      browser.fill('listingprice', '100')
+      browser.fill('listingdescription', 'TESTDESCRIPTION')
+      browser.pressButton('submit').then(function() {
+      browser.assert.text('.single_listing', 'TESTNAME');
+    })
+      next();
+    });
+  });
+
 });
