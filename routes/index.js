@@ -43,6 +43,25 @@ module.exports = function(app) {
          });
      });
 
+     app.post('/login', function(req, res) {
+       // if (isNaN(parseInt(req.body['listingprice']))) {
+       //   renderResponse(req, res, "put a number in the price plz.");
+       //   return;
+       // }
+        usersController.verify(req, res)
+        // console.log(req)
+        // console.log('******')
+        // console.log(res)
+        //  .then(function(user){ // redirect when success, flash needed.
+        //     res.redirect(302, '/');
+        //   }, function(error) { // render with error on failure
+        //     renderResponse(req, res, "Error!");
+        //   });
+      });
+
+      app.get('/error', function(req, res) {
+        renderResponse(req, res, "Incorrect login, try again!");
+       });
   // app.post('/', listingsController.create);
 
 }

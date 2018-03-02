@@ -10,4 +10,21 @@ module.exports = {
       })
   },
 
+  verify(req, res) {
+    return User
+      .findOne({
+        where: { username: req.body['username'],
+        password: req.body['password'] },
+      })
+      .then(function(user){
+        if (user != null){
+          res.redirect(302, '/');
+        } else {
+          res.redirect('/error');
+        }
+
+      })
+  },
+
 };
+//
