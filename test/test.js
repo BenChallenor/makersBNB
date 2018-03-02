@@ -12,4 +12,18 @@ describe('Homepage', function() {
     });
   });
 
+  it( "should add record to the website", function(next) {
+    browser.visit('/', function(){
+      browser.pressButton('#add_place_button');
+      browser.fill('listingname', "Ben's Second House")
+      browser.fill('listinglocation', "Bath")
+      browser.fill('listingprice', 500)
+      browser.fill('listingdescription', 'Buckets and stuff')
+      browser.pressButton('submit').then(function() {
+        browser.assert.text('.single_listing:last-of-type', 'Ben\'s Second House Bath Buckets and stuff £500'); //last
+      })
+      next();
+    });
+  });
+
 });
