@@ -2,13 +2,14 @@
 }
 
 .form {
+  visibility: hidden;
+}
+
+.visible_form {
+  visibility: visibile;
   background-color: #e9dad4;
   margin-bottom: 3em;
   padding-left: 1em;
-}
-
-.invisible_form {
-  visibility: hidden;
 }
 
 .single_form_window {
