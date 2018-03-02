@@ -26,4 +26,17 @@ describe('Homepage', function() {
     });
   });
 
+  it( "should be able to sign up to the website", function(next) {
+    browser.visit('/', function(){
+      browser.pressButton('#sign_up');
+      browser.fill('username', "Marcus Gardiner");
+      browser.fill('email', "mg@gmail.com");
+      browser.fill('password', "password123");
+      browser.pressButton('register').then(function() {
+        browser.assert.text('.username', "Welcome, Marcus Gardiner");
+      });
+      next();
+    });
+  });
+
 });

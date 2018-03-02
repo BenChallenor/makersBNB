@@ -29,6 +29,15 @@ module.exports = function(app) {
         });
     });
 
+    app.post('/user/new', function(req, res) {
+      userController.create(req, res)
+        .then(function(user) {
+          res.redirect(302, '/');
+        }, function(error) {
+          renderResponse(req,res, "Error!");
+        });
+     });
+
   // app.post('/', listingsController.create);
 
 }

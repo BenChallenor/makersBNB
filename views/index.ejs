@@ -24,6 +24,16 @@
     <input type="submit" value="submit">
   </form>
 
+  <button class="button" id="sign_up"> Add a place </button>
+
+  <form class="user_form" action="/user/new" method="post">
+    <p2> Add a place: </p2>
+    <input type="text" name="username" placeholder="username" class="single_form_window">
+    <input type="email" name="email" placeholder="email" class="single_form_window">
+    <input type="password" name="password" placeholder="password" class="single_form_window">
+    <input type="submit" value="register">
+  </form>
+
   <div class="listings">
 
       <% for (i = 0; i < x.length; i++) { %>
