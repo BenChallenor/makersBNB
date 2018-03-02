@@ -15,14 +15,6 @@
       <%= message %>
       <button class="button" id="add_place_button"> Add a place </button>
 
-      <script type='text/javascript'>
-      $( document ).ready(function() {
-        $('#add_place_button').click(function() {
-          $('.welcome2').text("YO!!!");
-        });
-      })
-      </script>
-
   <form class="form" action="/" method="post">
     <p2> Add a place: </p2>
     <input type="text" name="listingname" placeholder="listingname" class="single_form_window">
@@ -36,12 +28,12 @@
 
       <% for (i = 0; i < x.length; i++) { %>
       <div class="single_listing">
-      <h1><%= x[i].name %></h1> <br>
-      <div class="details">
-      <p3> <%= x[i].location %> </p3> <br>
-      <p2>  <%= x[i].description %>  </p2> <br>
-      <p4>  £<%= x[i].price %> </p4> <br>
-    </div>
+        <h1><%= x[i].name %></h1> <br>
+        <div class="details">
+          <p3> <%= x[i].location %> </p3> <br>
+          <p2> <%= x[i].description %>  </p2> <br>
+          <p4> £<%= x[i].price %> </p4> <br>
+        </div>
       </div>
       <% } %>
 
